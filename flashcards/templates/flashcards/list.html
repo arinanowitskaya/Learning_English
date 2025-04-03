@@ -1,0 +1,24 @@
+{% extends 'flashcards/base.html' %}
+
+{% block content %}
+    <h2 class="category-header">All Flashcards</h2>
+    
+    <a href="{% url 'create-flashcard' %}" style="display: inline-block; margin-bottom: 20px;">
+        <button>Add New Flashcard</button>
+    </a>
+    
+    {% regroup flashcards by get_category_display as category_list %}
+    
+    {% for category in category_list %}
+        <h2 class="category-header">{{ category.grouper }}s</h2>
+        
+        {% for flashcard in category.list %}
+            <div class="flashcard card">
+                <h3>{{ flashcard.word }}</h3>
+                <p><strong>Translation:</strong> {{ flashcard.translation }}</p>
+                <p class="example"><strong>Example:</strong> {{ flashcard.example }}</p>
+                <span class="category-tag">{{ flashcard.get_category_display }}</span>
+            </div>
+        {% endfor %}
+    {% endfor %}
+{% endblock %}

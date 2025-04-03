@@ -1,0 +1,122 @@
+[
+    {
+        "model": "flashcards.flashcard",
+        "pk": 1,
+        "fields": {
+            "word": "apple",
+            "translation": "яблоко",
+            "example": "I eat an apple every morning.",
+            "category": "noun"
+        }
+    },
+    {
+        "model": "flashcards.flashcard",
+        "pk": 2,
+        "fields": {
+            "word": "book",
+            "translation": "книга",
+            "example": "She is reading an interesting book.",
+            "category": "noun"
+        }
+    },
+    {
+        "model": "flashcards.flashcard",
+        "pk": 3,
+        "fields": {
+            "word": "city",
+            "translation": "город",
+            "example": "New York is a big city.",
+            "category": "noun"
+        }
+    },
+    {
+        "model": "flashcards.flashcard",
+        "pk": 4,
+        "fields": {
+            "word": "run",
+            "translation": "бегать",
+            "example": "He runs every morning.",
+            "category": "verb"
+        }
+    },
+    {
+        "model": "flashcards.flashcard",
+        "pk": 5,
+        "fields": {
+            "word": "eat",
+            "translation": "есть",
+            "example": "We eat dinner at 7 pm.",
+            "category": "verb"
+        }
+    },
+    {
+        "model": "flashcards.flashcard",
+        "pk": 6,
+        "fields": {
+            "word": "read",
+            "translation": "читать",
+            "example": "She reads a lot of books.",
+            "category": "verb"
+        }
+    },
+    {
+        "model": "flashcards.flashcard",
+        "pk": 7,
+        "fields": {
+            "word": "happy",
+            "translation": "счастливый",
+            "example": "I feel happy today.",
+            "category": "adjective"
+        }
+    },
+    {
+        "model": "flashcards.flashcard",
+        "pk": 8,
+        "fields": {
+            "word": "big",
+            "translation": "большой",
+            "example": "They live in a big house.",
+            "category": "adjective"
+        }
+    },
+    {
+        "model": "flashcards.flashcard",
+        "pk": 9,
+        "fields": {
+            "word": "beautiful",
+            "translation": "красивый",
+            "example": "She has a beautiful voice.",
+            "category": "adjective"
+        }
+    },
+    {
+        "model": "flashcards.flashcard",
+        "pk": 10,
+        "fields": {
+            "word": "quickly",
+            "translation": "быстро",
+            "example": "He runs quickly.",
+            "category": "adverb"
+        }
+    },
+    {
+        "model": "flashcards.flashcard",
+        "pk": 11,
+        "fields": {
+            "word": "slowly",
+            "translation": "медленно",
+            "example": "She walks slowly.",
+            "category": "adverb"
+        }
+    },
+    {
+        "model": "flashcards.flashcard",
+        "pk": 12,
+        "fields": {
+            "word": "well",
+            "translation": "хорошо",
+            "example": "He sings well.",
+            "category": "adverb"
+        }
+    }
+]

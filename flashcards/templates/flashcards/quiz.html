@@ -1,0 +1,68 @@
+{% extends 'flashcards/base.html' %}
+
+{% block content %}
+    {% if error %}
+        <div class="error-message">
+            {{ error }}
+        </div>
+    {% else %}
+        <div class="card">
+            <h2>Quiz</h2>
+            <p>Answer {{ questions|length }} questions to test your knowledge.</p>
+            
+            <form method="post">
+                {% csrf_token %}
+                {% for question in questions %}
+                    <div class="quiz-question">
+                        <h3>How do you translate: "{{ question.flashcard.word }}"?</h3>
+                        <div class="options">
+                            {% for option in question.options %}
+                                <label class="option">
+                                    <input type="radio" 
+                                           name="answer_{{ question.index }}" 
+                                           value="{{ option }}" 
+                                           required>
+                                    {{ option }}
+                                </label>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
+                <button type="submit" class="submit-btn">Submit Answers</button>
+            </form>
+        </div>
+    {% endif %}
+
+    <style>
+        .submit-btn {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 1.1em;
+        }
+        .quiz-question {
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        .options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 15px;
+        }
+        .option {
+            padding: 12px;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        .option:hover {
+            background-color: #e9ecef;
+            transform: translateY(-2px);
+        }
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+    </style>
+{% endblock %}
